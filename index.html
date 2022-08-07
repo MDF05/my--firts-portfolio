@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
     <!doctype html>
     <html lang="en">
 
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
+        <title>website gabut</title>
+        <!-- boostrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
+        <!-- style.css -->
         <link rel="stylesheet" href="style.css">
+        <!-- aos -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
     </head>
 
     <body>
@@ -53,7 +47,8 @@
         </nav>
 
         <section class="image-header">
-            <marquee behavior="alternate" direction="right" scrollamount="10">
+            <marquee behavior="alternate" direction="right" scrollamount="10" onmouseover="this.stop()"
+                onmouseout="this.start()">
                 <div class="image-1">
                     <h1>MUHAMMAD DAVA FAHREZA</h1>
                 </div>
@@ -70,17 +65,103 @@
         </section>
 
 
+        <section class="biodata">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="img/orang4.webp" alt="profile-picture" class="img-thumbnail mx-auto d-block"
+                            data-aos="flip-left" data-aos-duration="2000">
+                        <h1 class="text-center" data-aos="fade-right" data-aos-duration="3000">MY PROFILE</h1>
+                        <hr class="garis-horizontal">
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-center" data-aos="fade-down" data-aos-duration="1000">MY BIODATA</h4>
+                        <p data-aos="fade-right" data-aos-duration="3000">
+                            NAME : MUHAMMAD DAVA FAHREZA <br>
+                            BIRTDH : 05 NOVERMBER 2003 <br>
+                            LIVE : IN ACEH TAMIANG <br>
+                            GENDER : MAN <br>
+                            STATUS : NOT MARRIED YET <br>
+                            STUDY : HIGH SCHOOL GRADUATE <br>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-center" data-aos="fade-down" data-aos-duration="1000">ABOUT ME</h4>
+                        <p class="teks-2" data-aos="fade-left" data-aos-duration="3000">
+                            i like to play computer and learn about something new and interesting, i will spend a lot of
+                            time on it, and play a
+                            little game online to fill my spare time
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gambar-impian">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-center judul-utama">hal-hal yang ingin segera dimiliki dan dicapai</h1>
+                    </div>
+                </div>
+
+                <div class="row header-image">
+                    <div class="card col kartu-image" style="width: 20rem;">
+                        <img src="img/komputer.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">KAMAR GAMING</h5>
+                            <p class="card-text">mempunyai set komputer dan peralatan bagus jangan lupa wifi</p>
+                            <a href="#" class="btn btn-primary">BELIK SENIDRI</a>
+                        </div>
+                    </div>
+
+                    <div class="card col kartu-image" style="width: 20rem;">
+                        <img src="img/komputer2.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">KAMAR GAMING</h5>
+                            <p class="card-text">mempunyai set komputer dan peralatan bagus jangan lupa wifi</p>
+                            <a href="#" class="btn btn-primary">BELIK SENIDRI</a>
+                        </div>
+                    </div>
+
+                    <div class="card col kartu-image" style="width: 20rem;">
+                        <img src="img/komputer3.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">KAMAR GAMING</h5>
+                            <p class="card-text">mempunyai set komputer dan peralatan bagus jangan lupa wifi</p>
+                            <a href="#" class="btn btn-primary">BELIK SENIDRI</a>
+                        </div>
+                    </div>
+
+                    <div class="card col kartu-image " style="width: 20rem;">
+                        <img src="img/gambar36.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">KAMAR GAMING</h5>
+                            <p class="card-text">mempunyai set komputer dan peralatan bagus jangan lupa wifi</p>
+                            <a href="#" class="btn btn-primary">BELIK SENIDRI</a>
+                        </div>
+                    </div>
 
 
 
 
+                </div>
+            </div>
+        </section>
 
+
+
+
+        <!-- aos  java script -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <!-- jquery  boostrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
         </script>
     </body>
 
     </html>
-</body>
-
-</html>

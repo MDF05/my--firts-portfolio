@@ -1,8 +1,10 @@
-
+.navbar {
+    width: 100vw;
+}
 /* section  navbar */
 .navbar-brand {
-    font-size: calc(1.9vh + 1vw);
-    animation: navbar-brand 30s  infinite forwards;
+    font-size: calc(1.5vh + 1.5vw);
+    animation: navbar-brand 30s infinite;
     font-weight: bold;
     /* overflow: hidden; */
 }
@@ -144,12 +146,82 @@
     background-size: cover;
 }
 
-
-
-
-
-
-
-
-
 /* akhr section image-header */
+
+/* section  biodata */
+.biodata .img-thumbnail {
+    border-radius: 100%;
+    border: .1rem solid rgb(0, 0, 0);
+    width:calc(15vh + 10vw) ;
+    height: calc(15vh + 10vw);
+    box-shadow: .1rem  .1rem 0 black;
+    filter: blur(.1rem) sepia(20%) grayscale(10%) brightness(90%);
+    margin-top: 4rem;
+}
+
+.biodata h1 {
+    padding-top:2rem;
+    font-size: calc(1.5vh + 2vw);
+}
+
+.biodata  h4 {
+    font-size: calc(.9vh +  1.8vw);
+}
+
+.biodata  p {
+    font-size: calc(.9vh + 1.8vw);
+    overflow: hidden;
+}
+
+  .teks-2 {
+    padding-right: 2.5rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.garis-horizontal {
+    border-top: .3rem solid black;
+}
+/* section AKHIR biodata */
+
+/*section  gambar-impian  */
+/*card-image */
+.judul-utama {
+    padding-top: 3rem;
+    font-size: calc(4vw - .5vh);
+    text-transform: capitalize;
+    padding-bottom: 2rem;
+}
+
+.header-image p {
+    font-size: 1vw;
+}
+
+.header-image h5 {
+    font-size: 1vw;
+}
+
+
+.kartu-image {
+    margin: .2vw;
+    box-sizing: border-box;
+}
+
+.kartu-image  a {
+    font-size: 1vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kartu-image img {
+    height: calc(3vh +  10vw);
+}
+
+
+/* card image */
+
+
+
+    /* akhit section  gambar-impian */
