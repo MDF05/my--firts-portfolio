@@ -9,12 +9,12 @@
     /* overflow: hidden; */
 }
 
-.nav-link:hover {
+.nav-link:hover { b
     font-weight: bold;
     text-decoration:underline ;
-    font-style: italic;
+    font-style :italic;
     font-size: 1.2rem;
-    color: brown;
+    color:brown;
 }
 
 @keyframes navbar-brand {
@@ -180,48 +180,23 @@
 }
 
 .garis-horizontal {
-    border-top: .3rem solid black;
+    border-top: .15rem solid black;
 }
 /* section AKHIR biodata */
 
 /*section  gambar-impian  */
 /*card-image */
 .judul-utama {
-    padding-top: 3rem;
-    font-size: calc(4vw - .5vh);
+    padding-top: 1rem;
+    font-size: calc(3.5vw + .8vh);
+    font-weight: bold;
     text-transform: capitalize;
     padding-bottom: 2rem;
 }
 
-.header-image p {
-    font-size: 1vw;
-}
-
-.header-image h5 {
-    font-size: 1vw;
-}
-
-
 .kartu-image {
-    margin: .2vw;
-    box-sizing: border-box;
+    margin: auto;
 }
-
-.kartu-image  a {
-    font-size: 1vw;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.kartu-image img {
-    height: calc(3vh +  10vw);
-}
-
-
-/* card image */
-
 
 
     /* akhit section  gambar-impian */
