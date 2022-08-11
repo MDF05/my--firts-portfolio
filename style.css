@@ -77,17 +77,17 @@
 
     52% {
         transform: rotateY(0deg) rotateX(0deg);
-        color: aqua;
+        color: rgb(0, 0, 0);
         transform: translate(0,0);
-        text-shadow: 0.1rem 0.1rem 0 black;
+        text-shadow: 0.1rem 0.1rem 0 rgb(255, 255, 255);
         transform: rotateX(0deg);
     }
 
 
     85% {
-        color: aqua;
+        color: rgb(0, 0, 0);
         transform: translate(0,0);
-        text-shadow: 0.1rem 0.1rem 0 black;
+        text-shadow: 0.1rem 0.1rem 0 rgb(255, 255, 255);
         transform: rotateX(0deg);
     }
 
@@ -107,43 +107,74 @@
 /* akhir section navbar */
 
 /* section image-header */
+.pembungkus-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-header {
+    display: flex;
+    width: 400%;
+}
+
 .image-header div {
     height: calc(30vh + 20vw);
-    display:inline-flex;
-    width: 100vw;
-    background-color: aqua;
-    margin: 0 -.12rem;
+    display:flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .image-header h1 {
-    font-size: calc(1vh +  2.5vw);
+    font-size: calc(1vh +  5vw);
     font-weight: bold;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     text-shadow: .15rem .15rem 0 black;
+    margin-top: 50px;
+}
+
+.image-header .button {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.button button {
+    width: 30%;
+    font-size: calc(1vh + 2vw);
+    box-shadow: 2px 2px 0 black;
+    border: whitesmoke;
+}
+
+.button a {
+    text-decoration: none;
 }
 
 .image-header .image-1 {
-    background-image: url(img/gambar33.webp);
+    background-image: url(img/gambar43.webp);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .image-header .image-2 {
     background-image: url(img/gambar36.webp);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .image-header .image-3 {
     background-image: url(img/gambar35.webp);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .image-header .image-4 {
     background-image: url(img/gambar39.webp);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 /* akhr section image-header */
@@ -199,7 +230,7 @@
 }
 
 .kartu-image img {
-    height: 17rem;
+    height: 15rem;
     margin: auto;
 }
 
