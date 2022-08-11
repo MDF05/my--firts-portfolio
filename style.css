@@ -9,7 +9,7 @@
     /* overflow: hidden; */
 }
 
-.nav-link:hover { b
+.nav-link:hover { 
     font-weight: bold;
     text-decoration:underline ;
     font-style :italic;
