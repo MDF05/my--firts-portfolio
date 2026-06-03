@@ -1,0 +1,199 @@
+/* ===== CONTACT PAGE ===== */
+
+body {
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Hero */
+.contact-hero {
+    padding-top: 90px;
+    padding-bottom: 3rem;
+    background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+    text-align: center;
+}
+
+.contact-hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.contact-hero-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.3),
+        0 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+.contact-hero-name {
+    font-size: calc(1.5vh + 2.5vw);
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    letter-spacing: 0.04em;
+}
+
+.contact-hero-title {
+    font-size: calc(0.6vh + 1vw);
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-weight: 500;
+}
+
+.contact-hero-sub {
+    font-size: calc(0.5vh + 0.85vw);
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    font-style: italic;
+}
+
+/* Section */
+.contact-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 50%, #f5f0ff 100%);
+}
+
+.contact-section-title {
+    font-size: calc(1.2vh + 1.8vw);
+    font-weight: 800;
+    color: #0d6efd;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+}
+
+.contact-section-sub {
+    color: #666;
+    font-size: calc(0.5vh + 0.9vw);
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+/* Grid */
+.contact-grid {
+    gap: 1.2rem 0;
+}
+
+/* Card */
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.4rem;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid rgba(13, 110, 253, 0.12);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.05),
+        0 8px 20px rgba(13, 110, 253, 0.07);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    height: 100%;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(13, 110, 253, 0.35);
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.08),
+        0 16px 40px rgba(13, 110, 253, 0.15);
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-card-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 48px;
+    text-align: center;
+}
+
+.contact-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 0;
+}
+
+.contact-card-label {
+    font-size: calc(0.5vh + 0.75vw);
+    font-weight: 700;
+    color: #0d6efd;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.contact-card-value {
+    font-size: calc(0.5vh + 0.85vw);
+    color: #333;
+    word-break: break-all;
+}
+
+/* CTA section */
+.contact-cta {
+    padding: 3.5rem 0;
+    background: #ffffff;
+    border-top: 1px solid rgba(13, 110, 253, 0.1);
+}
+
+.contact-cta-title {
+    font-size: calc(1vh + 1.5vw);
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 0.4rem;
+}
+
+.contact-cta-sub {
+    color: #666;
+    font-size: calc(0.5vh + 0.9vw);
+    margin-bottom: 1.5rem;
+}
+
+.contact-cta-btn {
+    background: #0d6efd;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 0.65em 1.8em;
+    font-size: calc(0.5vh + 0.9vw);
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 4px 14px rgba(13, 110, 253, 0.35);
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-cta-btn:hover {
+    background: #0a58ca;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.45);
+}
+
+/* Footer */
+.contact-footer {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: calc(0.5vh + 0.8vw);
+}
+
+.contact-footer p {
+    margin-bottom: 0.4rem;
+}
+
+.contact-footer-back {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: calc(0.5vh + 0.8vw);
+    transition: color 0.2s ease;
+}
+
+.contact-footer-back:hover {
+    color: #ffffff;
+}

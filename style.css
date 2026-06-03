@@ -1,20 +1,32 @@
 .navbar {
     width: 100vw;
+    padding: 0 50px;
 }
 /* section  navbar */
 .navbar-brand {
     font-size: calc(1.5vh + 1.5vw);
     animation: navbar-brand 30s infinite;
     font-weight: bold;
-    /* overflow: hidden; */
+}
+
+.nav-link {
+    transition: color 0.2s ease, font-weight 0.2s ease;
+    font-size: calc(0.6vh + 0.85vw);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #333 !important;
+}
+
+.nav-link.active {
+    color: #0d6efd !important;
+    font-weight: 700;
 }
 
 .nav-link:hover { 
     font-weight: bold;
-    text-decoration:underline ;
-    font-style :italic;
-    font-size: 1.2rem;
-    color:brown;
+    text-decoration: underline;
+    font-style: italic;
+    color: brown !important;
 }
 
 @keyframes navbar-brand {
@@ -60,80 +72,119 @@
         color: aqua;
         transform: translate(0,0);
         text-shadow: 0.1rem 0.1rem 0 black;
-        transform: rotateX(0deg);
     }
 
     50% {
         color: aqua;
         transform: translate(0,0);
         text-shadow: 0.1rem 0.1rem 0 black;
-        transform: rotateX(0deg);
     }
 
     51% {
         color: red;
-        transform: rotateY(180deg) rotateX(180deg) ;
+        transform: rotateY(180deg) rotateX(180deg);
     }
 
     52% {
-        transform: rotateY(0deg) rotateX(0deg);
         color: rgb(0, 0, 0);
         transform: translate(0,0);
         text-shadow: 0.1rem 0.1rem 0 rgb(255, 255, 255);
-        transform: rotateX(0deg);
     }
-
 
     85% {
         color: rgb(0, 0, 0);
         transform: translate(0,0);
         text-shadow: 0.1rem 0.1rem 0 rgb(255, 255, 255);
-        transform: rotateX(0deg);
     }
 
     90% {
-        transform: rotateX(-360deg);
+        transform: rotateX(-360deg) scale(1);
         opacity: 1;
-        transform: scale(1);
     }
-
 
     100% {
         opacity: 0;
         transform: scale(0);
     }
-
 }
 /* akhir section navbar */
 
+.sertifikat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 50%, #f5f0ff 100%);
+}
+
+.sertifikat .Sertifikat {
+    font-size: calc(1.5vh + 2vw);
+    font-weight: 800;
+    color: #0d6efd;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+}
+
+.sertifikat-subtitle {
+    color: #666;
+    font-size: calc(0.5vh + 0.9vw);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
 /* section image-header */
 .pembungkus-image {
-    width: 100%;
+    width: 90%;
+    margin-top: 1.5rem;
     overflow: hidden;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(13, 110, 253, 0.12);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(13, 110, 253, 0.08),
+        0 24px 48px rgba(0, 0, 0, 0.1),
+        0 48px 80px rgba(0, 0, 0, 0.06);
+    transform: perspective(1200px) rotateX(1.5deg);
+    transform-origin: center top;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pembungkus-image:hover {
+    transform: perspective(1200px) rotateX(0deg) translateY(-6px);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.06),
+        0 16px 32px rgba(13, 110, 253, 0.12),
+        0 40px 72px rgba(0, 0, 0, 0.14),
+        0 64px 100px rgba(0, 0, 0, 0.08);
 }
 
 .image-header {
     display: flex;
-    width: 400%;
+    width: max-content;
+    gap: 2000px;
 }
 
 .image-header div {
-    height: calc(30vh + 20vw);
-    display:flex;
-    width: 100%;
+    height: auto;
+    min-height: calc(30vh + 10vw);
+    padding: 1.5rem 1rem;
+    display: flex;
     justify-content: center;
+    gap: 0.8rem;
+    width: 80vw;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .image-header h1 {
-    font-size: calc(1vh +  5vw);
+    font-size: calc(1vh + 5vw);
     font-weight: bold;
-    color: white;
+    color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     text-shadow: .15rem .15rem 0 black;
-    margin-top: 50px;
 }
 
 .image-header .button {
@@ -144,79 +195,180 @@
 
 .button button {
     width: 30%;
-    font-size: calc(1vh + 2vw);
-    box-shadow: 2px 2px 0 black;
-    border: whitesmoke;
+    font-size: calc(0.7vh + 1.2vw);
+    background: #0d6efd;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.4em 1em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    box-shadow: 0 3px 8px rgba(13, 110, 253, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    cursor: pointer;
+}
+
+.button button:hover {
+    background: #0a58ca;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.45);
 }
 
 .button a {
     text-decoration: none;
+    color: inherit;
 }
 
-.image-header .image-1 {
-    background-image: url(img/gambar43.webp);
-    background-size: cover;
-    background-attachment: fixed;
+.sertifikat-img {
+    max-height: 65%;
+    max-width: 75%;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid rgba(13, 110, 253, 0.15);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.1),
+        0 12px 32px rgba(13, 110, 253, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.image-header .image-2 {
-    background-image: url(img/gambar36.webp);
-    background-size: cover;
-    background-attachment: fixed;
+.sertifikat-img:hover {
+    transform: scale(1.02);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15),
+        0 20px 48px rgba(13, 110, 253, 0.2);
+}
+/* akhir section image-header */
+
+/* section biodata */
+.biodata {
+    padding-top: 80px; /* offset navbar fixed */
+    background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 60%, #f5f0ff 100%);
 }
 
-.image-header .image-3 {
-    background-image: url(img/gambar35.webp);
-    background-size: cover;
-    background-attachment: fixed;
+.biodata .container {
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: #ffffff;
+    border: 1px solid rgba(13, 110, 253, 0.12);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(13, 110, 253, 0.08),
+        0 24px 48px rgba(0, 0, 0, 0.1),
+        0 48px 80px rgba(0, 0, 0, 0.06);
+    transform: perspective(1200px) rotateX(1.5deg);
+    transform-origin: center top;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.image-header .image-4 {
-    background-image: url(img/gambar39.webp);
-    background-size: cover;
-    background-attachment: fixed;
+.biodata .container:hover {
+    transform: perspective(1200px) rotateX(0deg) translateY(-6px);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.06),
+        0 16px 32px rgba(13, 110, 253, 0.12),
+        0 40px 72px rgba(0, 0, 0, 0.14),
+        0 64px 100px rgba(0, 0, 0, 0.08);
 }
 
-/* akhr section image-header */
-
-/* section  biodata */
 .biodata .img-thumbnail {
-    border-radius: 100%;
-    border: .1rem solid rgb(0, 0, 0);
-    width:calc(15vh + 10vw) ;
-    height: calc(15vh + 10vw);
-    box-shadow: .1rem  .1rem 0 black;
-    filter: blur(.1rem) sepia(20%) grayscale(10%) brightness(90%);
-    margin-top: 4rem;
+    border: 3px solid #0d6efd;
+    width: min(400px, 200%);
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    box-shadow:
+        4px 6px 16px rgba(13, 110, 253, 0.25),
+        8px 12px 32px rgba(0, 0, 0, 0.15);
+    filter: sepia(5%) brightness(98%);
+    margin-top: 1rem;
+    border-radius: 12px;
+    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.biodata h1 {
-    padding-top:2rem;
-    font-size: calc(1.5vh + 2vw);
+.biodata .img-thumbnail:hover {
+    filter: sepia(0%) brightness(100%);
+    transform: scale(1.03) translateY(-4px);
+    box-shadow:
+        6px 12px 24px rgba(13, 110, 253, 0.35),
+        12px 20px 48px rgba(0, 0, 0, 0.2);
 }
 
-.biodata  h4 {
-    font-size: calc(.9vh +  1.8vw);
+.biodata .my-profile {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.biodata  p {
+.biodata h2 {
     font-size: calc(.9vh + 1.8vw);
-    overflow: hidden;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    color: #0d6efd;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(13, 110, 253, 0.15);
 }
 
-  .teks-2 {
-    padding-right: 2.5rem;
+.biodata p {
+    font-size: calc(.7vh + 1.2vw);
+    line-height: 2;
+    overflow: visible;
+    color: #333;
+}
+
+/* label key di biodata */
+.biodata p span.label {
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+/* link GitHub & LinkedIn di biodata */
+.biodata p a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.biodata p a:hover {
+    color: #0a58ca;
+    border-bottom-color: #0a58ca;
+}
+
+.teks-2 {
+    padding: 0 2rem;
     text-transform: capitalize;
-    text-align: center;
+    text-align: justify;
+    line-height: 1.8;
+    font-size: calc(.7vh + 1.1vw);
+    color: #444;
+    text-indent: 2.5em;
 }
 
 .garis-horizontal {
-    border-top: .15rem solid black;
+    border-top: 2px solid rgba(13, 110, 253, 0.2);
+    margin: 1.5rem 0;
 }
-/* section AKHIR biodata */
 
-/*section  gambar-impian  */
-/*card-image */
+.about-me {
+    margin-top: 10rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9ff 0%, #eef2ff 100%);
+    border-radius: 12px;
+    border-left: 4px solid #0d6efd;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.biodata div.about-me p {
+    text-align: justify;
+    color: #333;
+    margin: 0;
+}
+/* akhir section biodata */
+
+/* section gambar-impian */
 .judul-utama {
     padding-top: 1rem;
     font-size: calc(3.5vw + .8vh);
@@ -227,11 +379,306 @@
 
 .kartu-image {
     margin: auto;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.kartu-image:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 .kartu-image img {
     height: 15rem;
+    width: 100%;
+    object-fit: cover;
     margin: auto;
 }
+/* akhir section gambar-impian */
 
-    /* akhit section  gambar-impian */
+/* profile table layout */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0.5rem 0;
+    font-size: calc(0.6vh + 1vw);
+}
+
+.profile-table tr {
+    line-height: 2;
+}
+
+.profile-table th {
+    font-weight: 700;
+    color: #ffe082;
+    letter-spacing: 0.05em;
+    text-align: right;
+    white-space: nowrap;
+    width: 1%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0.4rem 0.6rem;
+    background-color: #0d6efd;
+}
+
+.profile-table td:first-of-type {
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 300;
+    text-align: center;
+    width: 1%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0.4rem 0.3rem;
+}
+
+.profile-table td:last-of-type {
+    color: #1a1a1a;
+    word-break: break-word;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0.4rem 0.6rem;
+}
+
+.profile-table td small {
+    display: block;
+    font-size: 0.85em;
+    color: black;
+    margin-top: 0.1rem;
+}
+
+.profile-sep { 
+    color: black;
+}
+
+.profile-value { 
+    color:black
+}
+
+/* skill badges */
+.skill-badge {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 600;
+    padding: 0.15em 0.5em;
+    margin: 0.15em 0.1em;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: black;
+    letter-spacing: 0.03em;
+    transition: background 0.2s ease;
+    background: rgba(255, 224, 130, 0.3);
+    color: #ffe082;
+    color: black;
+}
+
+/* gambar sertifikat */
+.sertifikat-img {
+    max-height: 70%;
+    max-width: 80%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+/* tombol navigasi sertifikat di atas */
+.image-header div .button {
+    order: -1;
+}
+
+/* section tech-stack */
+.tech-stack {
+    padding: 200px 0px;
+    background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 50%, #f5f0ff 100%);
+}
+
+.tech-stack-title {
+    font-size: calc(1.5vh + 2vw);
+    font-weight: 800;
+    color: #0d6efd;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+
+.tech-stack-subtitle {
+    color: #666;
+    font-size: calc(0.5vh + 0.9vw);
+    margin-bottom: 2.5rem;
+}
+
+.tech-stack-grid {
+    gap: 20px;
+}
+
+.tech-category {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(13, 110, 253, 0.1);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.06),
+        0 8px 24px rgba(13, 110, 253, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tech-category:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.1),
+        0 16px 40px rgba(13, 110, 253, 0.12);
+}
+
+.tech-coming-soon {
+    opacity: 0.7;
+    border-style: dashed;
+}
+
+.tech-category-title {
+    font-size: calc(0.6vh + 1vw);
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(13, 110, 253, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.badge-soon {
+    font-size: 0.65em;
+    background: #ffc107;
+    color: #333;
+    padding: 0.1em 0.5em;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tech-list li {
+    font-size: calc(0.5vh + 0.85vw);
+    background: #f0f4ff;
+    color: #0d6efd;
+    border: 1px solid rgba(13, 110, 253, 0.2);
+    border-radius: 6px;
+    padding: 0.25em 0.65em;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tech-list li:hover {
+    background: #0d6efd;
+    color: #ffffff;
+    border-color: #0d6efd;
+}
+/* akhir section tech-stack */
+
+/* section riwayat pendidikan */
+.education-section {
+    padding: 4rem 0;
+    background: #ffffff;
+}
+
+.education-title {
+    font-size: calc(1.5vh + 2vw);
+    font-weight: 800;
+    color: #0d6efd;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+}
+
+.education-sub {
+    color: #666;
+    font-size: calc(0.5vh + 0.9vw);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.06),
+        0 8px 24px rgba(13, 110, 253, 0.08);
+    font-size: calc(0.5vh + 0.85vw);
+}
+
+.education-table thead tr {
+    background: #0d6efd;
+    color: #ffffff;
+}
+
+.education-table thead th {
+    padding: 0.85rem 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: left;
+    border: none;
+}
+
+.education-table tbody tr {
+    border-bottom: 1px solid rgba(13, 110, 253, 0.1);
+    transition: background 0.2s ease;
+}
+
+.education-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.education-table tbody tr:hover {
+    background: #f0f4ff;
+}
+
+.education-table tbody td {
+    padding: 0.75rem 1rem;
+    color: #333;
+    vertical-align: middle;
+}
+
+.edu-badge {
+    display: inline-block;
+    padding: 0.2em 0.65em;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.edu-badge.formal {
+    background: #e7f1ff;
+    color: #0d6efd;
+    border: 1px solid rgba(13, 110, 253, 0.25);
+}
+
+.edu-badge.nonformal {
+    background: #f0fdf4;
+    color: #198754;
+    border: 1px solid rgba(25, 135, 84, 0.25);
+}
+/* akhir section riwayat pendidikan */
+
+/* text formatting tags */
+.teks-2 mark {
+    background-color: #cfe2ff;
+    color: #0a58ca;
+    padding: 0 0.2em;
+    border-radius: 3px;
+}
+
+.teks-2 strong {
+    color: #0d6efd;
+    font-weight: 700;
+}
+
+.teks-2 em {
+    font-style: italic;
+    color: #555;
+}
